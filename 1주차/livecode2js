@@ -1,0 +1,25 @@
+const name = '최영훈';
+const greeting = '나는 ' + name + '이야';
+console.log('안녕! ' + greeting + ' type: '+ typeof greeting);
+console.log(`안녕! ${greeting} type: ${typeof greeting}`);
+//결과 동일 [안녕! 나는 최영훈이야 type: string]
+
+
+const symbol1 = Symbol('id');
+const symbol2 = Symbol('id');
+
+console.log(symbol.description);
+console.log(symbol1 === symbol2);
+
+console.log('--------------');
+
+const includes = Symbol('커스텀 includes 함수');
+
+Array.prototype[includes] = function() {
+    return 'its Symbol';
+}
+
+var arr = [1,2,3];
+console.log(arr, includes(1));
+console.log(arr[includes(1));
+console.log(arr, includes(1));
